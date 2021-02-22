@@ -24,8 +24,17 @@ def change_fonts():
         pdf.set_font(font, size=font_size)
         txt = "Font name: {} - {} pts".format(font, font_size)
         pdf.cell(0, 10, txt=txt, ln=1, align="C")
-        font_size += 2 
+        font_size += 2
     pdf.output("change_fonts.pdf")
+
+def add_image(image_path):
+    pdf = FPDF()
+    pdf.add_page()
+    pdf.image(image_path, x=10, y=8, w=100)
+    pdf.set_font("Arial", size=12)
+    pdf.ln(85)
+    pdf.cell(200, 10, txt="{}".format(image_path), ln=1)
+    pdf.output("add_image.pdf")
 
 def main():
     args=def_params()
@@ -35,6 +44,7 @@ def main():
     pdf.cell(200, 10, txt="Welcome to Python!", ln=1, align="C")
     pdf.output("simple_demo.pdf")
     change_fonts()
+    add_image("rac.png")
 
 if __name__ == "__main__":
     main()
