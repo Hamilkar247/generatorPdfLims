@@ -2,4 +2,5 @@
 *.sw*
 .idea/
 venv/
-.flagkusy
+.flag
+*.pdf
