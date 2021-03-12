@@ -1,0 +1,3 @@
+#!/bin/bash
+
+alias evizlec="python zlecenieWykonaniaBadania.py | evince zlecenie.pdf"
